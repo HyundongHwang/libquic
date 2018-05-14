@@ -57,6 +57,8 @@ if (${ARCH} STREQUAL "386" AND APPLE)
 	set(ARCH "amd64")
 endif()
 
+message(STATUS "ARCH : ${ARCH}")
+
 #add_subdirectory(crypto)
 
 include_directories(src src/third_party/modp_b64 boringssl/include src/third_party/protobuf/src)
@@ -184,6 +186,8 @@ set(
 	src/net/spdy/hpack/hpack_output_stream.cc
 	src/net/spdy/hpack/hpack_static_table.cc
 )
+
+message(STATUS "CMAKE_SYSTEM_NAME : ${CMAKE_SYSTEM_NAME}")
 
 if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
 	set(
