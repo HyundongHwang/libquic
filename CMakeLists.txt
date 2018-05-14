@@ -57,6 +57,7 @@ if (${ARCH} STREQUAL "386" AND APPLE)
 	set(ARCH "amd64")
 endif()
 
+set(ARCH "arm")
 message(STATUS "ARCH : ${ARCH}")
 
 #add_subdirectory(crypto)
@@ -187,6 +188,7 @@ set(
 	src/net/spdy/hpack/hpack_static_table.cc
 )
 
+set(CMAKE_SYSTEM_NAME "Android")
 message(STATUS "CMAKE_SYSTEM_NAME : ${CMAKE_SYSTEM_NAME}")
 
 if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
